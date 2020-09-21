@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Productos</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-center pt-3">
+        <h1 class="title">Vista de productos</h1>
+      </div>
+      <div class="pt-4 pb-4 d-flex justify-content-around">
+        <a href="./index.html" class="btn btn-primary"> Volver </a>
+        <a
+          type="button"
+          class="btn btn-success"
+          data-toggle="modal"
+          data-target="#addProductModal"
+        >
+          Agregar producto
+        </a>
+        <a id="btn-logout" href="./index.html" class="btn btn-secondary"
+          >Cerrar sesión</a
+        >
+      </div>
+      <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr class="text-center">
+            <th scope="col">Nombre</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="body-table"></tbody>
+      </table>
+    </div>
+
+    <!-- Modal add product  -->
+    <div
+      class="modal fade"
+      id="addProductModal"
+      tabindex="-1"
+      aria-labelledby="addProductModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addProductModalLabel">Productos</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form-add-product">
+              <div class="form-group">
+                <label for="name" class="col-form-label"
+                  >Nombre producto:</label
+                >
+                <input type="text" class="form-control" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="price" class="col-form-label">Precio:</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  name="price"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="category" class="col-form-label">Categoria:</label>
+                <select class="custom-select" name="category" required>
+                  <option value="" selected>Selecciona una categoria...</option>
+                  <option value="Aseo">Aseo</option>
+                  <option value="Electrodomesticos">Electrodomesticos</option>
+                  <option value="Ropa">Ropa</option>
+                  <option value="Comida">Comida</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="description" class="col-form-label"
+                  >Descripción:</label
+                >
+                <textarea class="form-control" name="description"></textarea>
+              </div>
+
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  Agregar producto
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/products.js"></script>
+  </body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Inicio</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pt-3 text-center">
+        <h1 class="title">
+          API Rest de productos con registro e ingreso de usuario
+        </h1>
+      </div>
+      <div class="btns">
+        <div class="pt-5 pb-5 d-flex justify-content-around">
+          <button
+            id="btn-signup"
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#signupModal"
+            data-whatever="@mdo"
+          >
+            Registrarse
+          </button>
+          <button
+            id="btn-signin"
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#signinModal"
+            data-whatever="@fat"
+          >
+            Ingresar
+          </button>
+          <a id="btn-logout" class="btn btn-secondary d-none">
+            Cerrar sesión
+          </a>
+        </div>
+        <div class="pt-5 pb-5 text-center">
+          <a
+            id="btn-products"
+            href="./products.html"
+            class="btn btn-success d-none"
+            >Ir a productos</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Signup -->
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel">Registro</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form-signup">
+              <div class="form-group">
+                <label for="displayName" class="col-form-label"
+                  >Nombre de usuario:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="displayName-signup"
+                  name="displayName"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email" class="col-form-label">Correo:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email-signup"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password" class="col-form-label">Contraseña:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password-signup"
+                  name="password"
+                  required
+                />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+                <button type="submit" class="btn btn-primary">
+                  Registrarse
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Signin  -->
+    <div
+      class="modal fade"
+      id="signinModal"
+      tabindex="-1"
+      aria-labelledby="signinModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signinModalLabel">Inicio de sesión</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="form-signin">
+              <div class="form-group">
+                <label for="email" class="col-form-label">Correo:</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email-signin"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="password" class="col-form-label">Contraseña:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password-signin"
+                  name="password"
+                  required
+                />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Cerrar
+                </button>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/users.js"></script>
+  </body>
+</html>
