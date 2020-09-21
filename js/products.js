@@ -59,7 +59,7 @@ function createTable(products) {
         <td>${product.name}</td>
         <td>${product.category}</td>
         <td>${product.price}</td>
-        <td>${product.description || "No hay descrición"}</td>
+        <td>${product.description || "No hay descripción"}</td>
         <td class="text-center">
           <button type="button" class="btn btn-danger delete-product" id="${
             product._id
